@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+logs/
+results/**/*.log
+results/*.out
+results/gsm8k/**/samples_*.jsonl
+/traces/
+*.nsys-rep
+*.sqlite
+figures/**/*.pdf
