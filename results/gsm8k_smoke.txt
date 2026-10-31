@@ -1,0 +1,9 @@
+=== baseline-graph
+baseline-graph exit=0
+2026-11-06:17:02:06 INFO     [loggers.evaluation_tracker:119] Saving per-task samples to /pscratch/sd/a/ap2453/afd/repo/results/gsm8k/baseline-graph/deepseek-v2-lite-afd-baseline/*.jsonl
+|gsm8k|      3|flexible-extract|     8|exact_match|↑  |0.3047|±  |0.0408|
+|     |       |strict-match    |     8|exact_match|↑  |0.3047|±  |0.0408|
+E2E SCENARIO baseline-graph PASSED
+=== afd-v2-eager-1a1f
+graph exit=0
+eager exit=0
