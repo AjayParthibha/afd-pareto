@@ -1,0 +1,5 @@
+{"config": "afd-2a2f", "ngpu": 4, "shape": "long", "input_len": 4096, "output_len": 256,
+ "concurrency": 128, "num_prompts": 1024, "host": "nid200300", "date": "2026-11-06T18:24:09-08:00",
+ "knobs": {"A": "2", "F": "2", "DBO": "0", "GRAPH": "",
+           "MAX_SEQS": "", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": ""}}

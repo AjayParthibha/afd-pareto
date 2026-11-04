@@ -1,0 +1,5 @@
+{"config": "afd-3a1f-dbo", "ngpu": 4, "shape": "short", "input_len": 1024, "output_len": 128,
+ "concurrency": 256, "num_prompts": 2048, "host": "nid200300", "date": "2026-11-06T19:57:19-08:00",
+ "knobs": {"A": "3", "F": "1", "DBO": "1", "GRAPH": "",
+           "MAX_SEQS": "", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": ""}}
