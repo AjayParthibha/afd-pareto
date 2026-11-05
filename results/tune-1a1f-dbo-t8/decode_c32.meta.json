@@ -1,0 +1,5 @@
+{"config": "tune-1a1f-dbo-t8", "ngpu": 2, "shape": "decode", "input_len": 128, "output_len": 512,
+ "concurrency": 32, "num_prompts": 256, "host": "nid008397", "date": "2026-11-06T22:46:37-08:00",
+ "knobs": {"A": "1", "F": "1", "DBO": "1", "GRAPH": "",
+           "MAX_SEQS": "", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": ""}}

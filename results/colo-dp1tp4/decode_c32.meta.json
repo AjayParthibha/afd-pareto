@@ -1,0 +1,5 @@
+{"config": "colo-dp1tp4", "ngpu": 4, "shape": "decode", "input_len": 128, "output_len": 512,
+ "concurrency": 32, "num_prompts": 256, "host": "nid008288", "date": "2026-11-06T21:55:13-08:00",
+ "knobs": {"A": "", "F": "", "DBO": "", "GRAPH": "",
+           "MAX_SEQS": "", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": ""}}
