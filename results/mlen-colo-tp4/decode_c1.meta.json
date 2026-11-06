@@ -1,0 +1,5 @@
+{"config": "mlen-colo-tp4", "ngpu": 4, "shape": "decode", "input_len": 128, "output_len": 512,
+ "concurrency": 1, "num_prompts": 32, "host": "nid200416", "date": "2026-11-07T10:41:42-08:00",
+ "knobs": {"A": "", "F": "", "DBO": "", "GRAPH": "",
+           "MAX_SEQS": "", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": ""}}

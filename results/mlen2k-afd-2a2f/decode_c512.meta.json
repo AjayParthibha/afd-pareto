@@ -1,0 +1,5 @@
+{"config": "mlen2k-afd-2a2f", "ngpu": 4, "shape": "decode", "input_len": 128, "output_len": 512,
+ "concurrency": 512, "num_prompts": 4096, "host": "nid200365", "date": "2026-11-07T14:24:51-08:00",
+ "knobs": {"A": "2", "F": "2", "DBO": "", "GRAPH": "",
+           "MAX_SEQS": "256", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": "1,2,4,8,16,32,64,128,256"}}
