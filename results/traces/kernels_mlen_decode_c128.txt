@@ -1,0 +1,61 @@
+
+== dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128  attn  gpu0  window 20602 ms  kernels 559727  mean non-nccl 13.5 us
+   nccl 63.0%  moe_experts 11.8%  attention 4.5%  gemm 6.9%  norm 0.9%  sampling 1.4%  other 7.0%
+     63.0%  n=61800     209.9 us  [nccl] ncclDevKernel_SendRecv
+     11.8%  n=27783      87.7 us  [moe_experts] _fwd_grouped_kernel_stage1
+      4.8%  n=82945      12.0 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn
+      4.0%  n=27783      29.6 us  [attention] _fwd_kernel_stage2
+      2.5%  n=55432       9.2 us  [other] Kernel2
+      1.6%  n=1187      269.1 us  [gemm] ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn
+
+== dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128  ffn  gpu0  window 20598 ms  kernels 490482  mean non-nccl 30.6 us
+   nccl 52.1%  moe_experts 37.9%  attention 0.0%  gemm 7.1%  norm 0.0%  sampling 0.0%  other 3.4%
+     42.7%  n=57679     152.6 us  [nccl] ncclDevKernel_SendRecv
+     33.8%  n=53560     129.9 us  [moe_experts] fused_moe_kernel
+      6.0%  n=80340      15.4 us  [nccl] ncclDevKernel_AllGatherV_RING_LL
+      3.4%  n=26780      26.3 us  [nccl] ncclDevKernel_Reduce_Sum_bf16_RING_LL
+      3.2%  n=26626      24.4 us  [gemm] ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn
+      2.4%  n=26650      18.6 us  [moe_experts] moe_align_block_size_small_batch_expert_kernel
+
+== dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128  ffn  gpu1  window 20598 ms  kernels 434789  mean non-nccl 27.8 us
+   nccl 57.2%  moe_experts 36.3%  attention 0.0%  gemm 2.8%  norm 0.0%  sampling 0.0%  other 4.9%
+     46.0%  n=80340     117.8 us  [nccl] ncclDevKernel_AllGatherV_RING_LL
+     32.5%  n=53560     124.8 us  [moe_experts] fused_moe_kernel
+      5.8%  n=2059      584.9 us  [nccl] ncclDevKernel_SendRecv
+      5.4%  n=26780      41.7 us  [nccl] ncclDevKernel_Reduce_Sum_bf16_RING_LL
+      2.5%  n=26780      19.2 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_ldg8_f2f_stages_64x6_tn
+      2.4%  n=26650      18.6 us  [moe_experts] moe_align_block_size_small_batch_expert_kernel
+
+== dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128  ffn  gpu2  window 20598 ms  kernels 434789  mean non-nccl 27.8 us
+   nccl 57.4%  moe_experts 36.2%  attention 0.0%  gemm 2.8%  norm 0.0%  sampling 0.0%  other 4.9%
+     45.4%  n=80340     116.4 us  [nccl] ncclDevKernel_AllGatherV_RING_LL
+     32.4%  n=53560     124.7 us  [moe_experts] fused_moe_kernel
+      6.8%  n=2059      678.5 us  [nccl] ncclDevKernel_SendRecv
+      5.2%  n=26780      39.9 us  [nccl] ncclDevKernel_Reduce_Sum_bf16_RING_LL
+      2.5%  n=26780      19.4 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_ldg8_f2f_stages_64x6_tn
+      2.4%  n=26650      18.4 us  [moe_experts] moe_align_block_size_small_batch_expert_kernel
+
+== dsv2lite-vllm032-afd-1a1f-dbo-mlen4400-a100x2-decode-c128  attn  gpu0  window 39973 ms  kernels 1094452  mean non-nccl 8.9 us
+   nccl 75.1%  moe_experts 7.1%  attention 1.8%  gemm 6.2%  norm 0.9%  sampling 0.7%  other 5.3%
+     75.1%  n=113080    265.6 us  [nccl] ncclDevKernel_SendRecv
+      7.1%  n=55350      51.1 us  [moe_experts] _fwd_grouped_kernel_stage1
+      3.2%  n=110648     11.6 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn
+      2.0%  n=110646      7.3 us  [other] Kernel2
+      1.7%  n=55188      12.6 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x6_tn
+      1.4%  n=55350      10.1 us  [attention] _fwd_kernel_stage2
+
+== dsv2lite-vllm032-afd-1a1f-dbo-mlen4400-a100x2-decode-c128  ffn  gpu0  window 39969 ms  kernels 816119  mean non-nccl 53.1 us
+   nccl 9.2%  moe_experts 82.5%  attention 0.0%  gemm 8.5%  norm 0.0%  sampling 0.0%  other 2.4%
+     78.2%  n=106912    292.3 us  [moe_experts] fused_moe_kernel
+      9.2%  n=113079     32.4 us  [nccl] ncclDevKernel_SendRecv
+      3.5%  n=53144      26.5 us  [gemm] ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn
+      2.8%  n=53248      21.2 us  [moe_experts] moe_align_block_size_small_batch_expert_kernel
+      2.7%  n=108648      9.8 us  [gemm] splitKreduce_kernel
+      1.7%  n=53044      12.5 us  [gemm] ampere_bf16_s16816gemm_bf16_128x64_ldg8_f2f_stages_64x4_tn
+run,role,dev,window_ms,compute_ms,nccl_ms,overlap_ms,idle_ms,compute_pct,nccl_only_pct,idle_pct
+dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128,attn,0,20601.9,6698.3,12970.5,0.0,933.1,32.5,63.0,4.5
+dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128,ffn,0,20598.2,9492.7,10741.2,790.8,1155.1,46.1,48.3,5.6
+dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128,ffn,1,20597.9,8745.8,11788.0,645.6,709.6,42.5,54.1,3.4
+dsv2lite-vllm032-afd-1a3f-mlen4400-a100x4-decode-c128,ffn,2,20597.6,8730.0,11819.2,653.6,702.0,42.4,54.2,3.4
+dsv2lite-vllm032-afd-1a1f-dbo-mlen4400-a100x2-decode-c128,attn,0,39973.3,8762.1,30037.2,0.0,1174.0,21.9,75.1,2.9
+dsv2lite-vllm032-afd-1a1f-dbo-mlen4400-a100x2-decode-c128,ffn,0,39968.6,34486.8,3666.5,0.0,1815.4,86.3,9.2,4.5

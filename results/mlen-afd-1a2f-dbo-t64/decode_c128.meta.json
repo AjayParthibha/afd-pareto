@@ -1,0 +1,5 @@
+{"config": "mlen-afd-1a2f-dbo-t64", "ngpu": 3, "shape": "decode", "input_len": 128, "output_len": 512,
+ "concurrency": 128, "num_prompts": 1024, "host": "nid200277", "date": "2026-11-07T14:30:03-08:00",
+ "knobs": {"A": "1", "F": "2", "DBO": "1", "GRAPH": "",
+           "MAX_SEQS": "512", "MAX_BATCHED_TOKENS": "",
+           "CAPTURE_SIZES": "1,2,4,8,16,32,64,128,256,512"}}
